@@ -50,26 +50,26 @@ csvfile_3.close()
 
 fig, ax1 = plt.subplots()
 
-# plt.xlim(-0.05, 0.1)
+plt.xlim(-0.5, 5.5)
 ax2 = ax1.twinx()
 ax3 = ax1.twinx()
 
 ax1.set_xlabel('Time (ms)')
-ax1.set_ylabel('Primary voltage', color='tab:red')
+ax1.set_ylabel('Primary voltage', color='tab:red', fontsize=5)
 ax1.plot(x, priv10pc_y, color='tab:red', label='Pre-amplifier voltage')
-ax1.tick_params(axis='y', labelcolor='tab:red')
+ax1.tick_params(axis='y', labelcolor='tab:red', labelsize=5)
 
 ax2.spines["right"].set_position(("axes", -0.1))
-ax2.set_ylabel('Amplified voltage', color='tab:blue', labelpad=-45)
+ax2.set_ylabel('Amplified voltage', color='tab:blue', labelpad=-28, fontsize=5)
 ax2.plot(x, resv10pc_y, color='tab:blue', label='Post-amplifier')
-ax2.tick_params(axis='y', labelcolor='tab:blue')
+ax2.tick_params(axis='y', labelcolor='tab:blue', labelsize=5)
 
-ax3.spines["right"].set_position(("axes", -0.2))
-ax3.set_ylabel('Current', color='tab:orange', labelpad=-40)
+ax3.spines["right"].set_position(("axes", -0.15))
+ax3.set_ylabel('Current', color='tab:orange', labelpad=-25, fontsize=5)
 ax3.plot(x, curv10pc_y, color='tab:orange', label='Current')
-ax3.tick_params(axis='y', labelcolor='tab:orange')
+ax3.tick_params(axis='y', labelcolor='tab:orange', labelsize=5)
 
-fig.legend(loc='lower center', fancybox=True, shadow=True, ncol=5, prop={'size': 15})
+fig.legend(loc='lower center', fancybox=True, shadow=True, ncol=5, prop={'size': 5})
 
 ax1.set_ylim(-3, 3)
 ax2.set_ylim(-200, 200)
