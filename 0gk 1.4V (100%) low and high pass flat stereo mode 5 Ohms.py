@@ -112,7 +112,7 @@ droop_y = 5 * slope + intercept
 droop_time = 5.0 - z[0]
 droop = (((y_val - droop_y)/y_val) * 100)/droop_time
 
-with open("Results_100%.txt", "w") as text_file:
+with open("Results_100% (5 ohms).txt", "w") as text_file:
     print("The 100% amplified voltage is " + str(y_val) + " volts. The 10% amplified voltage is " + str(0.1 * y_val) +
           " \nvolts. The delay time is " + str(tpc_x) + " ms. ", file=text_file)
     print("The 90% amplified voltage is " + str(0.9 * y_val) + " volts, and the rise time is " + str(rise_time) +
@@ -120,4 +120,4 @@ with open("Results_100%.txt", "w") as text_file:
     print("The droop is " + str(droop) + "%/ms. ", file=text_file)
     print("The slew rate is " + str(slew_rate_100pc) + " V/ms. ", file=text_file)
 
-plt.savefig("V vs. t (100%).pdf")
+plt.savefig("V vs. t (100%, 5 ohms).pdf")
