@@ -21,9 +21,9 @@ with open('CurV 0gk 1.4V (100%) low and high pass flat stereo mode 5 Ohms.csv') 
         curv10pc_y.append(float(row[4])*100)
         if (0.0002 < float(row[3])) and (float(row[3]) < 0.002):
             x1.append(float(row[3])*1000)
-        elif (0.000014 < float(row[3])) and (float(row[3]) < 0.000028):
+        if (0.000014 < float(row[3])) and (float(row[3]) < 0.000028):
             x2.append(float(row[3])*1000)
-        elif (0.002 < float(row[3])) and (float(row[3]) < 0.005):
+        if (0.002 < float(row[3])) and (float(row[3]) < 0.005):
             x3.append(float(row[3])*1000)
 
 csvfile_1.close()
@@ -34,9 +34,9 @@ with open('ResisV 0gk 1.4V (100%) low and high pass flat stereo mode 5 Ohms.csv'
         resv10pc_y.append(float(row[4])*10)
         if (0.0002 < float(row[3])) and (float(row[3]) < 0.002):
             resv10pc_y1.append(float(row[4])*10)
-        elif (0.000014 < float(row[3])) and (float(row[3]) < 0.000028):
+        if (0.000014 < float(row[3])) and (float(row[3]) < 0.000028):
             resv10pc_y2.append(float(row[4])*10)
-        elif (0.002 < float(row[3])) and (float(row[3]) < 0.005):
+        if (0.002 < float(row[3])) and (float(row[3]) < 0.005):
             resv10pc_y3.append(float(row[4])*10)
 
 csvfile_2.close()
