@@ -1,0 +1,6 @@
+The 100% amplified voltage is 42.004585871307974 volts. The 10% amplified voltage is 4.200458587130798 
+volts. The delay time is 0.013971931870508327 ms. 
+The 90% amplified voltage is 37.80412728417718 volts, and the rise time is 0.01032702139734249 
+ms. 
+The droop is 0.15309052440464493%/ms. 
+The slew rate is 1641.4561692752536 V/ms. 
