@@ -8,7 +8,7 @@ x1 = []
 x2 = []
 curv10pc_y = []
 resv10pc_y = []
-priv10pc_y = []
+priv10pc_y=[]
 resv10pc_y1 = []
 resv10pc_y2 = []
 
