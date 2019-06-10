@@ -37,7 +37,7 @@ with open('ResisV 0gk 0.88V (63%) low and high pass flat stereo mode 5 Ohms.csv'
         if (-0.00018 < float(row[3])) and (float(row[3]) < 0.00025):
             x4.append(float(row[3])*1000)
             resv10pc_y2.append(float(row[4])*10)
-        if (-0.000745 < float(row[3])) and (float(row[3]) < -0.0005):
+        if (-0.000746 < float(row[3])) and (float(row[3]) < -0.0005):
             x_io.append(float(row[3])*1000)
             v_out.append(float(row[4]))
 
@@ -53,7 +53,7 @@ with open('PrimV 0gk 0.88V (63%) low and high pass flat stereo mode 5 Ohms.csv')
         if (-0.00022 < float(row[3])) and (float(row[3]) < 0.00022):
             x2.append(float(row[3])*1000)
             priv10pc_y2.append(float(row[4]))
-        if (-0.000745 < float(row[3])) and (float(row[3]) < -0.0005):
+        if (-0.000746 < float(row[3])) and (float(row[3]) < -0.0005):
             v_in.append(float(row[4]))
 
 csvfile_3.close()
@@ -120,7 +120,10 @@ for i in range(len(x4)):
 ax2.plot(x4, resv10pc_y22, 'r', label='fitted line')
 
 plt.figure(2)
-plt.plot(v_in, v_out)
+plt.scatter(v_in, v_out, s=1)
+plt.axhline(v_out[0])
 plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8])
+print("The input voltage is 0.88V where the rounding becomes appreciable. The maximum output voltage is about " +
+      str(v_out[0]) + "V. ")
 
 plt.show()
